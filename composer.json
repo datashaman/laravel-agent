@@ -1,0 +1,42 @@
+{
+    "name": "datashaman/laravel-agent",
+    "description": "Claude Code-equivalent tools for laravel/ai agents. Filesystem, shell, task management, and tool discovery.",
+    "keywords": ["laravel", "ai", "agent", "tools", "claude"],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.3",
+        "laravel/ai": "^0.3",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/filesystem": "^12.0|^13.0",
+        "illuminate/process": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DataShaman\\LaravelAgent\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DataShaman\\LaravelAgent\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DataShaman\\LaravelAgent\\LaravelAgentServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
