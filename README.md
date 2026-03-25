@@ -1,4 +1,4 @@
-# Laravel Agent
+# Laravel Agent Tools
 
 Claude Code-equivalent tools for [laravel/ai](https://github.com/laravel/ai) agents. Filesystem, shell, task management, and tool discovery.
 
@@ -11,7 +11,7 @@ Claude Code-equivalent tools for [laravel/ai](https://github.com/laravel/ai) age
 ## Installation
 
 ```bash
-composer require datashaman/laravel-agent
+composer require datashaman/laravel-agent-tools
 ```
 
 The service provider is auto-discovered. To publish the config:

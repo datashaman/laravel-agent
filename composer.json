@@ -1,5 +1,5 @@
 {
-    "name": "datashaman/laravel-agent",
+    "name": "datashaman/laravel-agent-tools",
     "description": "Claude Code-equivalent tools for laravel/ai agents. Filesystem, shell, task management, and tool discovery.",
     "keywords": ["laravel", "ai", "agent", "tools", "claude"],
     "license": "MIT",
