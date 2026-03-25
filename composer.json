@@ -34,6 +34,11 @@
             ]
         }
     },
+    "scripts": {
+        "lint": "pint --test",
+        "fix": "pint",
+        "test": "phpunit"
+    },
     "config": {
         "sort-packages": true
     },

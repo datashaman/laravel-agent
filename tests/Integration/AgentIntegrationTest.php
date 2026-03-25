@@ -17,9 +17,9 @@ use DataShaman\LaravelAgent\Tools\Tasks\TaskGet;
 use DataShaman\LaravelAgent\Tools\Tasks\TaskList;
 use DataShaman\LaravelAgent\Tools\Tasks\TaskUpdate;
 use DataShaman\LaravelAgent\Tools\Tasks\TodoWrite;
-use Laravel\Ai\Contracts\Agent;
 use Laravel\Ai\Contracts\HasTools;
 use Laravel\Ai\Contracts\Tool;
+use Laravel\Ai\Tools\Request;
 
 class AgentIntegrationTest extends TestCase
 {
@@ -82,20 +82,20 @@ class AgentIntegrationTest extends TestCase
         $edit = new EditFile(basePath: $tmpDir);
 
         // Write
-        $writeResult = (string) $write->handle(new \Laravel\Ai\Tools\Request([
+        $writeResult = (string) $write->handle(new Request([
             'file_path' => $tmpDir.'/test.txt',
             'content' => "hello world\n",
         ]));
         $this->assertStringContainsString('Created', $writeResult);
 
         // Read
-        $readResult = (string) $read->handle(new \Laravel\Ai\Tools\Request([
+        $readResult = (string) $read->handle(new Request([
             'file_path' => $tmpDir.'/test.txt',
         ]));
         $this->assertStringContainsString('hello world', $readResult);
 
         // Edit
-        $editResult = (string) $edit->handle(new \Laravel\Ai\Tools\Request([
+        $editResult = (string) $edit->handle(new Request([
             'file_path' => $tmpDir.'/test.txt',
             'old_string' => 'hello world',
             'new_string' => 'hello universe',

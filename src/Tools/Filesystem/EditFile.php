@@ -116,12 +116,14 @@ class EditFile implements Tool
             // Check for case-insensitive match
             if (mb_strtolower($trimmedLine) === $oldLower && $trimmedLine !== $oldTrimmed) {
                 $suggestions[] = "  Line {$lineNum}: case difference — '{$trimmedLine}'";
+
                 continue;
             }
 
             // Check for whitespace difference
             if ($trimmedLine === $oldTrimmed && $line !== $oldString) {
                 $suggestions[] = "  Line {$lineNum}: whitespace difference — '{$line}'";
+
                 continue;
             }
 
