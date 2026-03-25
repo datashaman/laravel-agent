@@ -48,7 +48,7 @@ class ToolSearch implements Tool
             return "No tools matched query: \"{$query}\". Try different keywords.";
         }
 
-        $output = "Found ".count($results)." tool(s):\n\n";
+        $output = 'Found '.count($results)." tool(s):\n\n";
 
         foreach ($results as $name => $info) {
             $output .= "## {$name}\n";

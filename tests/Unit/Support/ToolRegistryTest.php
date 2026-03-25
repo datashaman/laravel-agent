@@ -70,7 +70,8 @@ class ToolRegistryTest extends TestCase
 
     protected function createTool(string $desc): Tool
     {
-        return new class($desc) implements Tool {
+        return new class($desc) implements Tool
+        {
             private static int $counter = 0;
 
             private string $className;
